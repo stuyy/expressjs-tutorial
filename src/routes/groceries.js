@@ -37,4 +37,28 @@ router.post('/', (request, response) => {
   response.send(201);
 });
 
+router.get('/shopping/cart', (request, response) => {
+  const { cart } = request.session;
+  console.log('Cart');
+  if (!cart) {
+    response.send('You have no cart session');
+  } else {
+    response.send(cart);
+  }
+});
+
+router.post('/shopping/cart/item', (request, response) => {
+  const { item, quantity } = request.body;
+  const cartItem = { item, quantity };
+  const { cart } = request.session;
+  if (cart) {
+    request.session.cart.items.push(cartItem);
+  } else {
+    request.session.cart = {
+      items: [cartItem],
+    };
+  }
+  response.send(201);
+});
+
 module.exports = router;
