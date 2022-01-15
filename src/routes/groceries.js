@@ -17,10 +17,12 @@ const groceryList = [
   },
 ];
 
+router.use((req, res, next) => {
+  if (req.session.user) next();
+  else res.send(401);
+});
+
 router.get('/', (request, response) => {
-  response.cookie('visited', true, {
-    maxAge: 60000,
-  });
   response.send(groceryList);
 });
 
