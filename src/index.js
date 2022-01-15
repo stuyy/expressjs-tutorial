@@ -5,6 +5,8 @@ const groceriesRoute = require('./routes/groceries');
 const marketsRoute = require('./routes/markets');
 const authRoute = require('./routes/auth');
 
+require('./database');
+
 const app = express();
 const PORT = 3001;
 
