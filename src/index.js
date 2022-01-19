@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
-
+require('./strategies/local');
 // Routes
 const groceriesRoute = require('./routes/groceries');
 const marketsRoute = require('./routes/markets');
