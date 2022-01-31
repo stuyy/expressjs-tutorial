@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node ./src/index.js",
     "start:dev": "nodemon ./src/index.js"
   },
@@ -20,7 +20,8 @@
     "mongoose": "^6.1.6",
     "passport": "^0.5.2",
     "passport-discord": "^0.1.4",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "jest": "^27.4.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
