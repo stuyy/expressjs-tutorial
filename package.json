@@ -19,6 +19,7 @@
     "express-session": "^1.17.2",
     "mongoose": "^6.1.6",
     "passport": "^0.5.2",
+    "passport-discord": "^0.1.4",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {

@@ -3,7 +3,9 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
-require('./strategies/local');
+// require('./strategies/local');
+require('./strategies/discord');
+
 // Routes
 const groceriesRoute = require('./routes/groceries');
 const marketsRoute = require('./routes/markets');
